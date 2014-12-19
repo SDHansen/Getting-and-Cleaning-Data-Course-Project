@@ -60,4 +60,4 @@ summaryData<-dcast(tidyAllData, subject+activity_label~variable, mean)
 tidySummaryData<-melt(summaryData, id=c("subject", "activity_label"))
 
 ##  Write summary data to csv file
-write.csv(tidySummaryData, file="tidySummaryData.csv")
+write.table(tidySummaryData, file="tidySummaryData.txt", row.name=F)
